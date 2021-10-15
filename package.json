@@ -1,0 +1,23 @@
+{
+  "name": "jff-OKR",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/oceanlvr/jff-OKR",
+  "author": "oceanlvr <657531018@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.0.5"
+  },
+  "lint-staged": {
+    "**/!(generated)/*.{js,ts,tsx,graphql,yml,json}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
